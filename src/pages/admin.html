@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body class="font-bold">
+    <%- include('src/layout/sidebar.ejs'); -%>
+    <header class="ml-[296px]">
+      <div class="flex max-w-screen-lg items-center justify-between p-8">
+        <div class="flex gap-[50px]">
+          <h2 class="text-2xl leading-[29px]">Admin</h2>
+          <button
+            id="newAdminBtn"
+            class="flex items-center gap-2 hover:text-green-700"
+            href="#"
+          >
+            <span class="material-icons">add</span>
+            Add New Admin
+          </button>
+        </div>
+        <div class="space-x-7">
+          <button>
+            <span class="material-icons">search</span>
+          </button>
+          <button>
+            <span class="material-icons">notifications_active</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="ml-[296px] max-w-screen-lg px-8 pb-16">
+      <table class="w-full">
+        <thead class="mb-[-1px] border-b border-gray-900 text-left">
+          <tr>
+            <th class="mr-[74px] flex items-center">
+              ID
+              <span class="material-icons ml-1 text-lg">arrow_downward</span>
+            </th>
+            <th class="mr-[192px]">Name</th>
+            <th class="mr-[286px]">Email</th>
+            <th>Verified</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="font-normal">
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#1</td>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#2</td>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#3</td>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#4</td>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#5</td>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#6</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#7</td>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#8</td>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#9</td>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#10</td>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <%- include('src/components/pagination.ejs'); -%> <%-
+    include('src/components/modal/newAdmin.ejs'); -%> <%-
+    include('src/components/modal/viewAdmin.ejs'); -%> <%-
+    include('src/components/modal/editAdmin.ejs'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

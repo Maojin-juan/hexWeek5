@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body class="font-bold">
+    <%- include('src/layout/sidebar.ejs'); -%>
+    <header class="ml-[296px]">
+      <div class="flex max-w-screen-lg items-center justify-between p-8">
+        <div class="flex gap-[50px]">
+          <h2 class="text-2xl leading-[29px]">Assignment</h2>
+          <select class="w-[113px]" id="course">
+            <option>All Course</option>
+            <option>Course 1</option>
+            <option>Course 2</option>
+            <option>Course 3</option>
+          </select>
+        </div>
+        <div class="space-x-7">
+          <span class="material-icons">search</span>
+          <span class="material-icons">notifications_active</span>
+        </div>
+      </div>
+    </header>
+    <main class="ml-[296px] max-w-screen-lg px-8">
+      <div class="flex items-center justify-between pb-1">
+        <select class="w-[74px]" id="Course">
+          <option value="allCourse">All (4)</option>
+        </select>
+        <span class="text-xs font-normal text-gray-600">2 comments</span>
+      </div>
+      <div class="flex gap-4">
+        <ul class="mr-auto w-80 text-xs">
+          <li
+            class="mb-[-1px] rounded-t-sm border border-gray-400 bg-gray-100 p-3"
+          >
+            <div class="flex justify-between font-normal">
+              <span>Chapter Assignment 2</span>
+              <span>4 hrs ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-base">Please check this file…</h4>
+              <span class="font-normal text-gray-600">Emily Wang</span>
+            </div>
+          </li>
+          <li class="mb-[-1px] border border-gray-400 p-3">
+            <div class="flex justify-between font-normal">
+              <span>Chapter Assignment 1</span>
+              <span>12 hrs ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-base">My Homework</h4>
+              <span class="font-normal text-gray-600">David Xu</span>
+            </div>
+          </li>
+          <li class="mb-[-1px] border border-gray-400 p-3">
+            <div class="flex justify-between font-normal">
+              <span>Final Assignment</span>
+              <span>18 hrs ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-base">Have a problem with this…</h4>
+              <span class="font-normal text-gray-600">Tony Wei</span>
+            </div>
+          </li>
+          <li class="mb-[-1px] rounded-b-sm border border-gray-400 p-3">
+            <div class="flex justify-between font-normal">
+              <span>Final Assignment</span>
+              <span>19 hrs ago</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-base">Did I do it right?</h4>
+              <span class="font-normal text-gray-600">Christina Lin</span>
+            </div>
+          </li>
+        </ul>
+        <div class="w-[584px]">
+          <div
+            class="mb-[-1px] flex items-center justify-between rounded-t-sm border border-gray-400 bg-gray-100 p-3"
+          >
+            <div>
+              <span class="block text-xs font-normal">
+                Chapter Assignment 2 / HTML&CSS
+              </span>
+              <h3>Please check this file for me, thanks!</h3>
+            </div>
+            <a class="block" href="#">
+              <span class="material-icons">more_vert</span>
+            </a>
+          </div>
+          <div
+            class="mb-[-1px] flex flex-col gap-4 border border-b-0 border-gray-400"
+          >
+            <div class="flex items-center gap-2 px-4 pt-4">
+              <img
+                class="size-10 rounded-full"
+                src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emilywang.jpeg?raw=true"
+                alt="Sender"
+              />
+              <div class="space-y-1">
+                <p class="leading-[19px] text-gray-900">Emily Wang</p>
+                <time
+                  class="text-xs font-normal leading-[17px] text-gray-600"
+                  datetime="10:38"
+                >
+                  10:38 AM (4 hours ago)
+                </time>
+              </div>
+            </div>
+            <div class="pl-16 pr-8">
+              <p class="pb-4 text-[14px] font-normal leading-normal">
+                Hi Teacher, the attached file is my homework of chapter 2. And
+                here comes a question: Why in the following code the height of
+                the
+                <span class="codeLabel">div</span>
+                is bigger than the height of the
+                <span class="codeLabel">img</span>
+                ? There is a gap below the image, but it doesn’t seems to be a
+                padding/margin.
+                <br />
+                What is the gap or extra space below image?
+              </p>
+              <button
+                class="flex items-center border border-gray-400 bg-gray-100 p-3"
+                type="submit"
+              >
+                <span class="material-icons">attach_file</span>
+                HW-2-David.zip
+              </button>
+              <hr class="my-4 border-gray-400" />
+            </div>
+          </div>
+          <%- include('src/layout/replied.ejs'); -%>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

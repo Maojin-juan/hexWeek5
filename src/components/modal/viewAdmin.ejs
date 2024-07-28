@@ -1,0 +1,47 @@
+<div class="modal hidden" id="viewAdminModal" tabindex="-1">
+  <div class="modal-content w-[480px] font-normal">
+    <div class="flex gap-6">
+      <img
+        class="size-[141px] object-cover"
+        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true"
+        alt="adminHeadshot"
+      />
+      <div class="w-full">
+        <div class="flex justify-between">
+          <span class="flex" id="viewAdminId"></span>
+          <button class="closeModalBtn flex hover:scale-150 hover:duration-300">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+        <p class="leading-[19px]">Admin</p>
+        <h3 class="text-2xl font-bold" id="viewAdminName"></h3>
+        <p
+          class="pb-4 text-[14px] leading-[17px] text-gray-600"
+          id="viewAdminEmail"
+        ></p>
+        <div class="flex items-center justify-between">
+          <span class="flex rounded-sm bg-gray-100 px-2 py-1 text-[14px]">
+            Verified
+          </span>
+          <button class="toggleBtn flex">
+            <span class="material-icons">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="hiddenDiv" class="hidden space-x-4 pt-8 text-end leading-5">
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
+        type="submit"
+      >
+        Cancel
+      </button>
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
+        type="submit"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>

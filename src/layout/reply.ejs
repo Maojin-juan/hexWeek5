@@ -1,0 +1,60 @@
+<div>
+  <div
+    class="mb-[-1px] flex items-center justify-between rounded-t-sm border border-gray-400 bg-gray-100"
+  >
+    <ul class="flex items-center gap-4 p-4">
+      <li>
+        <select class="w-[103px] bg-gray-100" id="course">
+          <option>Body Text</option>
+        </select>
+      </li>
+      <li>
+        <button class="flex">
+          <span class="material-icons">format_italic</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex">
+          <span class="material-icons">format_list_bulleted</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex">
+          <span class="material-icons">format_list_numbered</span>
+        </button>
+      </li>
+      <li>
+        <button class="flex"><span class="material-icons">image</span></button>
+      </li>
+      <li>
+        <button class="flex"><span class="material-icons">link</span></button>
+      </li>
+      <li>
+        <button class="flex"><span class="material-icons">code</span></button>
+      </li>
+    </ul>
+  </div>
+  <div class="relative">
+    <textarea
+      id="editor"
+      rows="12"
+      class="block w-full rounded-b-sm border border-gray-400 bg-white px-0 pl-6 pt-4 text-sm"
+      placeholder="Reply an answer…"
+      required
+    ></textarea>
+    <div class="absolute bottom-4 right-6 ml-auto space-x-4 leading-5">
+      <button
+        class="rounded-sm border border-green-700 px-8 py-2 text-green-700"
+        type="submit"
+      >
+        Cancel
+      </button>
+      <button
+        class="rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white"
+        type="submit"
+      >
+        Reply
+      </button>
+    </div>
+  </div>
+</div>
