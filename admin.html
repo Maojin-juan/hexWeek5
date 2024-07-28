@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <script type="module" crossorigin src="/hexWeek5/assets/main-C5MzrJGJ.js"></script>
+    <link rel="stylesheet" crossorigin href="/hexWeek5/assets/main-A7N90Gv7.css">
+  </head>
+  <body class="font-bold">
+    <aside class="fixed h-screen w-[296px]">
+  <div class="grid h-full overflow-y-auto bg-gray-100">
+    <div class="py-8">
+      <a class="block pb-8 pl-8" href="#">
+        <img
+          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/9f843c654f4bbfb95e6ab2eaf0c5a42f2c3c6205/week5/logo-ANSWER.svg"
+          alt="logo-ANSWER"
+        />
+      </a>
+      <ul class="space-y-5 leading-8">
+        <li>
+          <a href="#" class="sidebar">
+            <span class="material-icons">assessment</span>
+            <span class="ms-4">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar">
+            <span class="material-icons">question_answer</span>
+            <span class="ms-4">Question</span>
+          </a>
+        </li>
+        <li>
+          <a href="./index.html" class="sidebar sidebarSelected">
+            <span class="material-icons sidebarSpanMinus">assignment</span>
+            <span class="ms-4">Assignment</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar">
+            <span class="material-icons">video_library</span>
+            <span class="ms-4">Course</span>
+          </a>
+        </li>
+        <li>
+          <a href="./admin.html" class="sidebar">
+            <span class="material-icons">people_alt</span>
+            <span class="ms-4">Admin</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="sidebar">
+            <span class="material-icons">settings</span>
+            <span class="ms-4">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="mt-auto flex items-center gap-4 p-8">
+      <img
+        class="size-10 rounded-full"
+        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true"
+        alt="user"
+      />
+      <div class="space-y-1">
+        <p class="leading-[19px] text-gray-900">Andy Chen</p>
+        <p class="text-[14px] font-normal leading-[17px] text-gray-600">
+          andy0401&#64;gmail.com
+        </p>
+      </div>
+    </div>
+  </div>
+</aside>
+    <header class="ml-[296px]">
+      <div class="flex max-w-screen-lg items-center justify-between p-8">
+        <div class="flex gap-[50px]">
+          <h2 class="text-2xl leading-[29px]">Admin</h2>
+          <button
+            id="newAdminBtn"
+            class="flex items-center gap-2 hover:text-green-700"
+            href="#"
+          >
+            <span class="material-icons">add</span>
+            Add New Admin
+          </button>
+        </div>
+        <div class="space-x-7">
+          <button>
+            <span class="material-icons">search</span>
+          </button>
+          <button>
+            <span class="material-icons">notifications_active</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="ml-[296px] max-w-screen-lg px-8 pb-16">
+      <table class="w-full">
+        <thead class="mb-[-1px] border-b border-gray-900 text-left">
+          <tr>
+            <th class="mr-[74px] flex items-center">
+              ID
+              <span class="material-icons ml-1 text-lg">arrow_downward</span>
+            </th>
+            <th class="mr-[192px]">Name</th>
+            <th class="mr-[286px]">Email</th>
+            <th>Verified</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="font-normal">
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#1</td>
+            <td>Emir Wicks</td>
+            <td>emir.wicks@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#2</td>
+            <td>Zaina Goldsmith</td>
+            <td>zaina.goldsmith@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#3</td>
+            <td>Mahima Lopez</td>
+            <td>mahima.lopez@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#4</td>
+            <td>Pharrell Murray</td>
+            <td>pharrell.murray@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#5</td>
+            <td>Annika Mcbride</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#6</td>
+            <td>annika.mcbride@mail.com</td>
+            <td>fatimah.clark@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#7</td>
+            <td>Klaudia Rhodes</td>
+            <td>klaudia.rhodes@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#8</td>
+            <td>Tillie Lucero</td>
+            <td>tillie.lucero@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#9</td>
+            <td>Sabrina Stephenson</td>
+            <td>sabrina.stephenson@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+          <tr class="mb-[-1px] h-[55px] border-b border-gray-400 align-middle">
+            <td>#10</td>
+            <td>Annie Smith</td>
+            <td>annie.smith@mail.com</td>
+            <td>Yes</td>
+            <td class="space-x-6 text-end text-[0px]">
+              <button class="viewAdminBtn">
+                <span class="material-icons">visibility</span>
+              </button>
+              <button class="editAdminBtn">
+                <span class="material-icons">edit</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <nav class="ml-[296px] flex max-w-screen-lg justify-end px-8 font-normal">
+  <ul class="flex items-center">
+    <li>
+      <a
+        class="paginationTabs me-[-1px] size-8 rounded-s-sm border border-green-700 text-green-700 duration-300 ease-in-out hover:bg-green-700 hover:text-white"
+        href="#"
+      >
+        <span class="material-icons">chevron_left</span>
+      </a>
+    </li>
+    <li>
+      <a
+        class="paginationTabs me-[-1px] size-8 border border-green-700 bg-green-700 text-white duration-300 ease-in-out"
+        href="#"
+      >
+        1
+      </a>
+    </li>
+    <li>
+      <a
+        class="paginationTabs me-[-1px] size-8 border border-green-700 duration-300 ease-in-out hover:bg-green-700 hover:text-white"
+        href="#"
+      >
+        2
+      </a>
+    </li>
+    <li>
+      <a
+        class="paginationTabs me-[-1px] size-8 border border-green-700 duration-300 ease-in-out hover:bg-green-700 hover:text-white"
+        href="#"
+      >
+        3
+      </a>
+    </li>
+    <li>
+      <a
+        class="paginationTabs me-[-1px] size-8 rounded-e-sm border border-green-700 text-green-700 duration-300 ease-in-out hover:bg-green-700 hover:text-white"
+        href="#"
+      >
+        <span class="material-icons">navigate_next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+ <div class="modal hidden" id="newAdminModal" tabindex="-1">
+  <div class="modal-content max-h-[736px] w-[430px]">
+    <div class="flex justify-between pb-8">
+      <h2 class="text-xl font-bold">New Admin</h2>
+      <button class="closeModalBtn hover:scale-150 hover:duration-300">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <h3 class="pb-4">Account</h3>
+    <form class="grid gap-4 text-[14px] font-normal">
+      <div class="grid">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="editName"
+          name="name"
+          class="rounded-sm border border-gray-900 px-4 py-2"
+        />
+      </div>
+      <div class="grid">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="editEmail"
+          name="email"
+          class="rounded-sm border border-gray-900 px-4 py-2"
+        />
+      </div>
+    </form>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Verification</h3>
+    <div class="flex justify-between pb-4">
+      <div class="flex items-center gap-[10px]">
+        <span class="material-icons text-red-600">warning</span>
+        <p>Unverified</p>
+      </div>
+    </div>
+    <button
+      class="w-full rounded-sm border border-gray-400 py-4 text-center text-green-700"
+    >
+      Send Verification Mail
+    </button>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Access Level</h3>
+    <select
+      class="w-full rounded-sm border border-gray-900 p-4 font-normal leading-[19px] text-gray-400"
+      id="editAccess"
+    >
+      <option value="">-Choose access level-</option>
+      <option value="Admin">Admin</option>
+      <option value="User">User</option>
+    </select>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Custom Access</h3>
+    <ul class="grid gap-4 font-normal">
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess1" />
+        <label for="customAccess1">Lecture</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess2" />
+        <label for="customAccess2">Coupon</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess3" />
+        <label for="customAccess3">Message</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess4" />
+        <label for="customAccess4">Setting</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess5" />
+        <label for="customAccess5">Task Menu</label>
+      </li>
+    </ul>
+    <div class="space-x-4 pb-4 pt-12 text-end leading-5">
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
+        type="submit"
+      >
+        Cancel
+      </button>
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
+        type="submit"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+ <div class="modal hidden" id="viewAdminModal" tabindex="-1">
+  <div class="modal-content w-[480px] font-normal">
+    <div class="flex gap-6">
+      <img
+        class="size-[141px] object-cover"
+        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true"
+        alt="adminHeadshot"
+      />
+      <div class="w-full">
+        <div class="flex justify-between">
+          <span class="flex" id="viewAdminId"></span>
+          <button class="closeModalBtn flex hover:scale-150 hover:duration-300">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+        <p class="leading-[19px]">Admin</p>
+        <h3 class="text-2xl font-bold" id="viewAdminName"></h3>
+        <p
+          class="pb-4 text-[14px] leading-[17px] text-gray-600"
+          id="viewAdminEmail"
+        ></p>
+        <div class="flex items-center justify-between">
+          <span class="flex rounded-sm bg-gray-100 px-2 py-1 text-[14px]">
+            Verified
+          </span>
+          <button class="toggleBtn flex">
+            <span class="material-icons">expand_more</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="hiddenDiv" class="hidden space-x-4 pt-8 text-end leading-5">
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
+        type="submit"
+      >
+        Cancel
+      </button>
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
+        type="submit"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+ <div class="modal hidden" id="editAdminModal" tabindex="-1">
+  <div class="modal-content max-h-[736px] w-[430px]">
+    <div class="flex justify-between pb-8">
+      <h2 class="text-xl font-bold">Edit Admin</h2>
+      <button class="closeModalBtn hover:scale-150 hover:duration-300">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+    <h3 class="pb-4">Account</h3>
+    <form class="grid gap-4 text-[14px] font-normal">
+      <div class="grid">
+        <input type="hidden" id="editAdminId" name="editAdminId" />
+        <label for="editAdminName">Name</label>
+        <input
+          type="text"
+          id="editAdminName"
+          name="editAdminName"
+          class="rounded-sm border border-gray-100 bg-gray-100 px-4 py-2"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="grid">
+        <label for="adminEmail">Email</label>
+        <input
+          type="email"
+          id="editAdminEmail"
+          name="editAdminEmail"
+          class="rounded-sm border border-gray-100 bg-gray-100 px-4 py-2"
+          placeholder="Enter your email"
+        />
+      </div>
+    </form>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Verification</h3>
+    <div class="flex justify-between pb-4">
+      <div class="flex items-center gap-[10px]">
+        <span class="material-icons text-green-700">check_circle</span>
+        <p>Verified</p>
+      </div>
+      <time class="font-normal" datetime="2020/4/12">2020/4/12</time>
+    </div>
+    <button
+      class="w-full rounded-sm border border-gray-400 py-4 text-center text-gray-400"
+      disabled
+    >
+      Send Verification Mail
+    </button>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Access Level</h3>
+    <select
+      class="border-gry-900 w-full border p-4 leading-[19px]"
+      id="editAccess"
+    >
+      <option value="Admin">Admin</option>
+      <option value="User">User</option>
+    </select>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Custom Access</h3>
+    <ul class="grid gap-4 font-normal">
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess1" />
+        <label for="customAccess1">Lecture</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess2" />
+        <label for="customAccess2">Coupon</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess3" />
+        <label for="customAccess3">Message</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess4" />
+        <label for="customAccess4">Setting</label>
+      </li>
+      <li class="space-x-2">
+        <input type="checkbox" id="customAccess5" />
+        <label for="customAccess5">Task Menu</label>
+      </li>
+    </ul>
+    <hr class="my-6 border-gray-400" />
+    <h3 class="pb-4">Deactivate Account</h3>
+    <div class="flex gap-2 pb-5 text-red-600">
+      <span class="material-icons">warning</span>
+      <p>This cannot be undone!</p>
+    </div>
+    <button
+      class="w-full rounded-sm border border-red-500 py-4 text-center leading-[19px] text-red-500 duration-300 hover:bg-red-600 hover:text-white"
+    >
+      Deactivate This Account
+    </button>
+    <div class="space-x-4 pb-4 pt-12 text-end leading-5">
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
+        type="submit"
+      >
+        Cancel
+      </button>
+      <button
+        class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
+        type="submit"
+      >
+        Update
+      </button>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
