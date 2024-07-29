@@ -25,10 +25,6 @@
   input[type="checkbox"] {
     @apply cursor-pointer;
   }
-
-  .modal-content::-webkit-scrollbar {
-    @apply hidden;
-  }
 }
 
 @layer components {
@@ -52,8 +48,6 @@
 
   .modal-content {
     @apply relative overflow-y-auto bg-white;
-    -ms-overflow-style: none; /* IE 和 Edge */
-    scrollbar-width: none; /* Firefox */
   }
 }
 
