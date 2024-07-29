@@ -1,13 +1,11 @@
-export function openModal(modalId) {
-  const modal = document.getElementById(modalId);
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-}
+const toggleModal = (modal, action) => {
+  modal.classList[action === "open" ? "remove" : "add"]("hidden");
+  modal.classList[action === "open" ? "add" : "remove"]("flex");
+};
 
-export function closeModal(modal) {
-  modal.classList.remove("flex");
-  modal.classList.add("hidden");
-}
+export const openModal = (modalId) =>
+  toggleModal(document.getElementById(modalId), "open");
+export const closeModal = (modal) => toggleModal(modal, "close");
 
 // 綁定事件
 export function bindModalEvents(openBtnId, modalId) {
@@ -35,50 +33,60 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
+  const handleButtonClick = (button) => {
+    const modalIdPrefix = button.classList.contains("editAdminBtn")
+      ? "edit"
+      : "view";
+    const row = button.closest("tr");
+    const id = `#${row.getAttribute("data-id")}`;
+    const name = row.children[1].textContent;
+    const email = row.children[2].textContent;
+
+    const idElement = document.getElementById(`${modalIdPrefix}AdminId`);
+    const nameElement = document.getElementById(`${modalIdPrefix}AdminName`);
+    const emailElement = document.getElementById(`${modalIdPrefix}AdminEmail`);
+
+    if (idElement && nameElement && emailElement) {
+      if (modalIdPrefix === "view") {
+        idElement.textContent = id;
+        nameElement.textContent = name;
+        emailElement.textContent = email;
+      } else {
+        idElement.value = id;
+        nameElement.value = name;
+        emailElement.value = email;
+      }
+      openModal(`${modalIdPrefix}AdminModal`);
+    } else {
+      console.error(`Cannot find modal elements for prefix: ${modalIdPrefix}`);
+    }
+  };
+
   document
     .querySelectorAll("button.viewAdminBtn, button.editAdminBtn")
     .forEach((button) => {
-      const modalIdPrefix = button.classList.contains("editAdminBtn")
-        ? "edit"
-        : "view";
-      button.addEventListener("click", () => {
-        const row = button.closest("tr");
-        const id = `#${row.getAttribute("data-id")}`;
-        const name = row.children[1].textContent;
-        const email = row.children[2].textContent;
-
-        const idElement = document.getElementById(`${modalIdPrefix}AdminId`);
-        const nameElement = document.getElementById(
-          `${modalIdPrefix}AdminName`,
-        );
-        const emailElement = document.getElementById(
-          `${modalIdPrefix}AdminEmail`,
-        );
-
-        if (idElement && nameElement && emailElement) {
-          if (modalIdPrefix === "view") {
-            idElement.textContent = id;
-            nameElement.textContent = name;
-            emailElement.textContent = email;
-          } else {
-            idElement.value = id;
-            nameElement.value = name;
-            emailElement.value = email;
-          }
-          openModal(`${modalIdPrefix}AdminModal`);
-        } else {
-          console.error(
-            `Cannot find modal elements for prefix: ${modalIdPrefix}`,
-          );
-        }
-      });
+      button.addEventListener("click", () => handleButtonClick(button));
     });
 });
 
-// 新增事件監聽器，切換 hiddenDiv 的顯示狀態
-document.querySelectorAll(".toggleBtn").forEach((button) => {
-  button.addEventListener("click", () => {
-    const hiddenDiv = document.getElementById("hiddenDiv");
-    hiddenDiv.classList.toggle("hidden");
+document.addEventListener("DOMContentLoaded", () => {
+  const hiddenDiv = document.getElementById("hiddenDiv");
+  const toggleButton = document.querySelector(".toggleBtn");
+
+  toggleButton.addEventListener("click", () => {
+    const isHidden = hiddenDiv.classList.contains("max-h-0");
+    hiddenDiv.classList.toggle("max-h-0", !isHidden);
+    hiddenDiv.classList.toggle("opacity-0", !isHidden);
+    hiddenDiv.classList.toggle("max-h-screen", isHidden);
+    hiddenDiv.classList.toggle("opacity-100", isHidden);
+  });
+});
+
+document.addEventListener("click", (event) => {
+  ["newAdminModal", "editAdminModal"].forEach((modalId) => {
+    const modal = document.getElementById(modalId);
+    if (modal && !modal.contains(event.target)) {
+      closeModal(modalId);
+    }
   });
 });

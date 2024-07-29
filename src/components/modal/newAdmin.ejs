@@ -1,80 +1,86 @@
 <div class="modal hidden" id="newAdminModal" tabindex="-1">
-  <div class="modal-content max-h-[736px] w-[430px]">
-    <div class="flex justify-between pb-8">
+  <div class="modal-content h-5/6 w-[430px]">
+    <div
+      class="modalHeader sticky top-0 flex justify-between rounded-t-sm border-x border-t border-gray-400 bg-white px-8 py-4"
+    >
       <h2 class="text-xl font-bold">New Admin</h2>
       <button class="closeModalBtn hover:scale-150 hover:duration-300">
         <span class="material-icons">close</span>
       </button>
     </div>
-    <h3 class="pb-4">Account</h3>
-    <form class="grid gap-4 text-[14px] font-normal">
-      <div class="grid">
-        <label for="name">Name</label>
-        <input
-          type="text"
-          id="editName"
-          name="name"
-          class="rounded-sm border border-gray-900 px-4 py-2"
-        />
+    <div class="border-x border-gray-400 px-8 pb-8">
+      <h3 class="pb-4">Account</h3>
+      <form class="grid gap-4 text-[14px] font-normal">
+        <div class="grid">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="editName"
+            name="name"
+            class="rounded-sm border border-gray-900 px-4 py-2"
+          />
+        </div>
+        <div class="grid">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="editEmail"
+            name="email"
+            class="rounded-sm border border-gray-900 px-4 py-2"
+          />
+        </div>
+      </form>
+      <hr class="my-6 border-gray-400" />
+      <h3 class="pb-4">Verification</h3>
+      <div class="flex justify-between pb-4">
+        <div class="flex items-center gap-[10px]">
+          <span class="material-icons text-red-600">warning</span>
+          <p>Unverified</p>
+        </div>
       </div>
-      <div class="grid">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="editEmail"
-          name="email"
-          class="rounded-sm border border-gray-900 px-4 py-2"
-        />
-      </div>
-    </form>
-    <hr class="my-6 border-gray-400" />
-    <h3 class="pb-4">Verification</h3>
-    <div class="flex justify-between pb-4">
-      <div class="flex items-center gap-[10px]">
-        <span class="material-icons text-red-600">warning</span>
-        <p>Unverified</p>
-      </div>
+      <button
+        class="w-full rounded-sm border border-gray-400 py-4 text-center text-green-700"
+      >
+        Send Verification Mail
+      </button>
+      <hr class="my-6 border-gray-400" />
+      <h3 class="pb-4">Access Level</h3>
+      <select
+        class="w-full rounded-sm border border-gray-900 p-4 font-normal leading-[19px] text-gray-400"
+        id="editAccess"
+      >
+        <option value="">-Choose access level-</option>
+        <option value="Admin">Admin</option>
+        <option value="User">User</option>
+      </select>
+      <hr class="my-6 border-gray-400" />
+      <h3 class="pb-4">Custom Access</h3>
+      <ul class="grid gap-4 font-normal">
+        <li class="space-x-2">
+          <input type="checkbox" id="customAccess1" />
+          <label for="customAccess1">Lecture</label>
+        </li>
+        <li class="space-x-2">
+          <input type="checkbox" id="customAccess2" />
+          <label for="customAccess2">Coupon</label>
+        </li>
+        <li class="space-x-2">
+          <input type="checkbox" id="customAccess3" />
+          <label for="customAccess3">Message</label>
+        </li>
+        <li class="space-x-2">
+          <input type="checkbox" id="customAccess4" />
+          <label for="customAccess4">Setting</label>
+        </li>
+        <li class="space-x-2">
+          <input type="checkbox" id="customAccess5" />
+          <label for="customAccess5">Task Menu</label>
+        </li>
+      </ul>
     </div>
-    <button
-      class="w-full rounded-sm border border-gray-400 py-4 text-center text-green-700"
+    <div
+      class="modalFooter sticky bottom-0 space-x-4 rounded-b-sm border border-gray-400 bg-white px-8 py-4 text-end leading-5"
     >
-      Send Verification Mail
-    </button>
-    <hr class="my-6 border-gray-400" />
-    <h3 class="pb-4">Access Level</h3>
-    <select
-      class="w-full rounded-sm border border-gray-900 p-4 font-normal leading-[19px] text-gray-400"
-      id="editAccess"
-    >
-      <option value="">-Choose access level-</option>
-      <option value="Admin">Admin</option>
-      <option value="User">User</option>
-    </select>
-    <hr class="my-6 border-gray-400" />
-    <h3 class="pb-4">Custom Access</h3>
-    <ul class="grid gap-4 font-normal">
-      <li class="space-x-2">
-        <input type="checkbox" id="customAccess1" />
-        <label for="customAccess1">Lecture</label>
-      </li>
-      <li class="space-x-2">
-        <input type="checkbox" id="customAccess2" />
-        <label for="customAccess2">Coupon</label>
-      </li>
-      <li class="space-x-2">
-        <input type="checkbox" id="customAccess3" />
-        <label for="customAccess3">Message</label>
-      </li>
-      <li class="space-x-2">
-        <input type="checkbox" id="customAccess4" />
-        <label for="customAccess4">Setting</label>
-      </li>
-      <li class="space-x-2">
-        <input type="checkbox" id="customAccess5" />
-        <label for="customAccess5">Task Menu</label>
-      </li>
-    </ul>
-    <div class="space-x-4 pb-4 pt-12 text-end leading-5">
       <button
         class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
         type="submit"
@@ -85,7 +91,7 @@
         class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
         type="submit"
       >
-        Update
+        Add
       </button>
     </div>
   </div>

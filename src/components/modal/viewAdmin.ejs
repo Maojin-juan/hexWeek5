@@ -1,6 +1,6 @@
 <div class="modal hidden" id="viewAdminModal" tabindex="-1">
   <div class="modal-content w-[480px] font-normal">
-    <div class="flex gap-6">
+    <div class="flex gap-6 p-8">
       <img
         class="size-[141px] object-cover"
         src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/emir.jpeg?raw=true"
@@ -29,19 +29,24 @@
         </div>
       </div>
     </div>
-    <div id="hiddenDiv" class="hidden space-x-4 pt-8 text-end leading-5">
-      <button
-        class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
-        type="submit"
-      >
-        Cancel
-      </button>
-      <button
-        class="closeModalBtn rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
-        type="submit"
-      >
-        Update
-      </button>
+    <div
+      id="hiddenDiv"
+      class="max-h-0 overflow-hidden opacity-0 duration-500 ease-in-out"
+    >
+      <div class="flex justify-end px-8 pb-8">
+        <button
+          class="closeModalBtn rounded-sm border border-red-500 px-8 py-2 text-red-500 duration-300 hover:bg-red-600 hover:text-white"
+          type="submit"
+        >
+          Deactivate
+        </button>
+        <button
+          class="closeModalBtn ml-4 rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white duration-300 hover:bg-green-900"
+          type="submit"
+        >
+          Edit
+        </button>
+      </div>
     </div>
   </div>
 </div>
