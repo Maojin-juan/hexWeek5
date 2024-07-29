@@ -1,3 +1,14 @@
+const editBtn = document.querySelectorAll(".editBtn");
+const viewAdminModal = document.getElementById("viewAdminModal");
+const editAdminModal = document.getElementById("editAdminModal");
+editBtn.forEach((element) => {
+  element.addEventListener("click", () => {
+    editAdminModal.classList.remove("hidden");
+    editAdminModal.classList.add("flex");
+    viewAdminModal.classList.add("hidden");
+  });
+});
+
 const toggleModal = (modal, action) => {
   modal.classList[action === "open" ? "remove" : "add"]("hidden");
   modal.classList[action === "open" ? "add" : "remove"]("flex");
@@ -81,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     hiddenDiv.classList.toggle("opacity-100", isHidden);
   });
 });
-
 document.addEventListener("click", (event) => {
   ["newAdminModal", "editAdminModal"].forEach((modalId) => {
     const modal = document.getElementById(modalId);
