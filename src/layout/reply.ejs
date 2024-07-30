@@ -37,24 +37,23 @@
   <div class="relative">
     <textarea
       id="editor"
-      rows="12"
-      class="block w-full rounded-b-sm border border-gray-400 bg-white px-0 pl-6 pt-4 text-sm"
+      class="block h-[230px] w-full resize-none rounded-b-sm border border-gray-400 bg-white px-0 pl-6 pt-4 text-sm"
       placeholder="Reply an answer…"
       required
     ></textarea>
     <div class="absolute bottom-4 right-6 ml-auto space-x-4 leading-5">
       <button
-        class="rounded-sm border border-green-700 px-8 py-2 text-green-700"
+        class="rounded-sm border border-green-700 px-8 py-2 text-green-700 transition-all hover:bg-green-900 hover:text-white"
         type="submit"
       >
         Cancel
       </button>
-      <button
-        class="rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white"
-        type="submit"
+      <a
+        class="rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white transition-all hover:bg-green-900"
+        href="./index.html"
       >
         Reply
-      </button>
+      </a>
     </div>
   </div>
 </div>

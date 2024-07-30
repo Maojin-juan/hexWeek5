@@ -49,12 +49,20 @@
   .modal-content {
     @apply relative overflow-y-auto bg-white;
   }
+
+  .viewAdminBtn {
+    @apply hover:text-cyan-400 hover:transition-all;
+  }
+
+  .editAdminBtn {
+    @apply hover:text-green-600 hover:transition-all;
+  }
 }
 
 @layer utilities {
   /* 自組樣式 */
   .sidebar {
-    @apply flex items-center pl-8 text-gray-900;
+    @apply flex items-center pl-8 text-gray-900 transition-all hover:scale-110 hover:text-green-700;
   }
 
   .sidebarSelected {

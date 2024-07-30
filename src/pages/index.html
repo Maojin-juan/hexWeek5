@@ -18,9 +18,16 @@
             <option>Course 3</option>
           </select>
         </div>
-        <div class="space-x-7">
-          <span class="material-icons">search</span>
-          <span class="material-icons">notifications_active</span>
+        <div class="flex gap-7">
+          <a class="flex transition-all hover:scale-125" href="#">
+            <span class="material-icons flex">search</span>
+          </a>
+          <a
+            class="flex animate-bounce transition-all hover:scale-125 hover:animate-none"
+            href="#"
+          >
+            <span class="material-icons">notifications_active</span>
+          </a>
         </div>
       </div>
     </header>
@@ -36,44 +43,58 @@
           <li
             class="mb-[-1px] rounded-t-sm border border-gray-400 bg-gray-100 p-3"
           >
-            <div class="flex justify-between font-normal">
-              <span>Chapter Assignment 2</span>
-              <span>4 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Please check this file…</h4>
-              <span class="font-normal text-gray-600">Emily Wang</span>
-            </div>
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Chapter Assignment 2</span>
+                <span>4 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Please check this file…</h4>
+                <span class="font-normal text-gray-600">Emily Wang</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Chapter Assignment 1</span>
-              <span>12 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">My Homework</h4>
-              <span class="font-normal text-gray-600">David Xu</span>
-            </div>
+          <li
+            class="mb-[-1px] border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Chapter Assignment 1</span>
+                <span>12 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">My Homework</h4>
+                <span class="font-normal text-gray-600">David Xu</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Final Assignment</span>
-              <span>18 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Have a problem with this…</h4>
-              <span class="font-normal text-gray-600">Tony Wei</span>
-            </div>
+          <li
+            class="mb-[-1px] border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Final Assignment</span>
+                <span>18 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Have a problem with this…</h4>
+                <span class="font-normal text-gray-600">Tony Wei</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] rounded-b-sm border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Final Assignment</span>
-              <span>19 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Did I do it right?</h4>
-              <span class="font-normal text-gray-600">Christina Lin</span>
-            </div>
+          <li
+            class="mb-[-1px] rounded-b-sm border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Final Assignment</span>
+                <span>19 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Did I do it right?</h4>
+                <span class="font-normal text-gray-600">Christina Lin</span>
+              </div>
+            </a>
           </li>
         </ul>
         <div class="w-[584px]">
@@ -123,7 +144,7 @@
                 What is the gap or extra space below image?
               </p>
               <button
-                class="flex items-center border border-gray-400 bg-gray-100 p-3"
+                class="flex w-[176px] items-center justify-center border border-gray-400 bg-gray-100 py-[10px] leading-[19px] transition-all hover:bg-gray-300"
                 type="submit"
               >
                 <span class="material-icons">attach_file</span>
