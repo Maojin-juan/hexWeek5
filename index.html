@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment</title>
-    <script type="module" crossorigin src="/hexWeek5/assets/main-DZV9-OlW.js"></script>
-    <link rel="stylesheet" crossorigin href="/hexWeek5/assets/main-Ds8oO9ob.css">
+    <script type="module" crossorigin src="/hexWeek5/assets/main-dTtmsy1s.js"></script>
+    <link rel="stylesheet" crossorigin href="/hexWeek5/assets/main-CA0ZAFaD.css">
   </head>
   <body class="font-bold">
     <aside class="fixed h-screen w-[296px]">
-  <div class="grid h-full overflow-y-auto bg-gray-100">
+  <div class="grid h-full justify-between overflow-y-auto bg-gray-100">
     <div class="py-8">
       <a class="block pb-8 pl-8" href="#">
         <img
@@ -56,18 +56,23 @@
         </li>
       </ul>
     </div>
-    <div class="mt-auto flex items-center gap-4 p-8">
-      <img
-        class="size-10 rounded-full"
-        src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true"
-        alt="user"
-      />
-      <div class="space-y-1">
-        <p class="leading-[19px] text-gray-900">Andy Chen</p>
-        <p class="text-[14px] font-normal leading-[17px] text-gray-600">
-          andy0401&#64;gmail.com
-        </p>
-      </div>
+    <div class="flex p-8">
+      <a
+        class="flex items-center gap-4 transition-all hover:scale-110 hover:opacity-70"
+        href="#"
+      >
+        <img
+          class="size-10 rounded-full"
+          src="https://github.com/hexschool/2022-web-layout-training/blob/main/week5/andychen.jpeg?raw=true"
+          alt="user"
+        />
+        <div class="space-y-1">
+          <p class="leading-[19px] text-gray-900">Andy Chen</p>
+          <p class="text-[14px] font-normal leading-[17px] text-gray-600">
+            andy0401&#64;gmail.com
+          </p>
+        </div>
+      </a>
     </div>
   </div>
 </aside>
@@ -82,9 +87,16 @@
             <option>Course 3</option>
           </select>
         </div>
-        <div class="space-x-7">
-          <span class="material-icons">search</span>
-          <span class="material-icons">notifications_active</span>
+        <div class="flex gap-7">
+          <a class="flex transition-all hover:scale-125" href="#">
+            <span class="material-icons flex">search</span>
+          </a>
+          <a
+            class="flex animate-bounce transition-all hover:scale-125 hover:animate-none"
+            href="#"
+          >
+            <span class="material-icons">notifications_active</span>
+          </a>
         </div>
       </div>
     </header>
@@ -100,44 +112,58 @@
           <li
             class="mb-[-1px] rounded-t-sm border border-gray-400 bg-gray-100 p-3"
           >
-            <div class="flex justify-between font-normal">
-              <span>Chapter Assignment 2</span>
-              <span>4 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Please check this file…</h4>
-              <span class="font-normal text-gray-600">Emily Wang</span>
-            </div>
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Chapter Assignment 2</span>
+                <span>4 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Please check this file…</h4>
+                <span class="font-normal text-gray-600">Emily Wang</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Chapter Assignment 1</span>
-              <span>12 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">My Homework</h4>
-              <span class="font-normal text-gray-600">David Xu</span>
-            </div>
+          <li
+            class="mb-[-1px] border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Chapter Assignment 1</span>
+                <span>12 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">My Homework</h4>
+                <span class="font-normal text-gray-600">David Xu</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Final Assignment</span>
-              <span>18 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Have a problem with this…</h4>
-              <span class="font-normal text-gray-600">Tony Wei</span>
-            </div>
+          <li
+            class="mb-[-1px] border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Final Assignment</span>
+                <span>18 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Have a problem with this…</h4>
+                <span class="font-normal text-gray-600">Tony Wei</span>
+              </div>
+            </a>
           </li>
-          <li class="mb-[-1px] rounded-b-sm border border-gray-400 p-3">
-            <div class="flex justify-between font-normal">
-              <span>Final Assignment</span>
-              <span>19 hrs ago</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <h4 class="text-base">Did I do it right?</h4>
-              <span class="font-normal text-gray-600">Christina Lin</span>
-            </div>
+          <li
+            class="mb-[-1px] rounded-b-sm border border-gray-400 p-3 transition-all hover:bg-gray-100"
+          >
+            <a href="#">
+              <div class="flex justify-between font-normal">
+                <span>Final Assignment</span>
+                <span>19 hrs ago</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <h4 class="text-base">Did I do it right?</h4>
+                <span class="font-normal text-gray-600">Christina Lin</span>
+              </div>
+            </a>
           </li>
         </ul>
         <div class="w-[584px]">
@@ -187,7 +213,7 @@
                 What is the gap or extra space below image?
               </p>
               <button
-                class="flex items-center border border-gray-400 bg-gray-100 p-3"
+                class="flex w-[176px] items-center justify-center border border-gray-400 bg-gray-100 py-[10px] leading-[19px] transition-all hover:bg-gray-300"
                 type="submit"
               >
                 <span class="material-icons">attach_file</span>
@@ -254,17 +280,17 @@
   </div>
   <div class="space-x-4 leading-5">
     <button
-      class="rounded-sm border border-gray-700 px-8 py-2 text-green-700"
+      class="rounded-sm border border-gray-700 px-8 py-2 text-green-700 transition-all hover:bg-green-900 hover:text-white"
       type="submit"
     >
       Mark as Read
     </button>
-    <button
-      class="rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white"
-      type="submit"
+    <a
+      class="rounded-sm border border-green-700 bg-green-700 px-8 py-2 text-white transition-all hover:bg-green-900"
+      href="./reply.html"
     >
       Reply
-    </button>
+    </a>
   </div>
 </div>
         </div>
