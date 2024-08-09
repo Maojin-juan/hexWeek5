@@ -62,14 +62,11 @@
 @layer utilities {
   /* 自組樣式 */
   .sidebar {
-    @apply flex items-center pl-8 text-gray-900 transition-all hover:text-green-700;
+    @apply relative flex items-center pl-8 text-gray-900 transition-all hover:text-green-700;
   }
 
   .sidebarSelected {
-    @apply border-l-4 border-green-700 text-green-700;
-  }
-
-  .sidebarSpanMinus {
-    @apply ml-[-4px];
+    @apply absolute -left-1 hidden h-8 w-1 bg-green-700 transition-all hover:block;
+    content: "";
   }
 }
