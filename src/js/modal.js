@@ -81,22 +81,44 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  // 綁定按鈕事件
+  document
+    .querySelectorAll("button.viewAdminBtn, button.editAdminBtn")
+    .forEach((button) => {
+      button.addEventListener("click", () => handleButtonClick(button));
+    });
+
+  // 綁定隱藏區域切換按鈕事件
   const hiddenDiv = document.getElementById("hiddenDiv");
   const toggleButton = document.querySelector(".toggleBtn");
 
-  toggleButton.addEventListener("click", () => {
-    const isHidden = hiddenDiv.classList.contains("max-h-0");
-    hiddenDiv.classList.toggle("max-h-0", !isHidden);
-    hiddenDiv.classList.toggle("opacity-0", !isHidden);
-    hiddenDiv.classList.toggle("max-h-screen", isHidden);
-    hiddenDiv.classList.toggle("opacity-100", isHidden);
+  if (toggleButton && hiddenDiv) {
+    toggleButton.addEventListener("click", () => {
+      const isHidden = hiddenDiv.classList.contains("max-h-0");
+      hiddenDiv.classList.toggle("max-h-0", !isHidden);
+      hiddenDiv.classList.toggle("opacity-0", !isHidden);
+      hiddenDiv.classList.toggle("max-h-screen", isHidden);
+      hiddenDiv.classList.toggle("opacity-100", isHidden);
+    });
+  }
+
+  // 綁定點擊事件以關閉模態框
+  document.addEventListener("click", (event) => {
+    ["newAdminModal", "editAdminModal"].forEach((modalId) => {
+      const modal = document.getElementById(modalId);
+      if (modal && !modal.contains(event.target)) {
+        closeModal(modalId);
+      }
+    });
   });
 });
-document.addEventListener("click", (event) => {
-  ["newAdminModal", "editAdminModal"].forEach((modalId) => {
-    const modal = document.getElementById(modalId);
-    if (modal && !modal.contains(event.target)) {
-      closeModal(modalId);
-    }
+
+// 反轉按鈕圖案
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector(".toggleBtn");
+  const icon = toggleBtn.querySelector(".arrow");
+
+  toggleBtn.addEventListener("click", () => {
+    icon.classList.toggle("rotate-180");
   });
 });

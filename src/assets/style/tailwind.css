@@ -62,11 +62,15 @@
 @layer utilities {
   /* 自組樣式 */
   .sidebar {
-    @apply relative flex items-center pl-8 text-gray-900 transition-all hover:text-green-700;
+    @apply relative flex items-center pl-8 text-gray-900;
   }
 
   .sidebarSelected {
-    @apply absolute -left-1 hidden h-8 w-1 bg-green-700 transition-all hover:block;
+    @apply text-green-700;
+  }
+
+  .sidebarSelected::after {
+    @apply absolute -left-1 h-8 w-1 bg-green-700 transition-all;
     content: "";
   }
 }
