@@ -4,52 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment</title>
-    <script type="module" crossorigin src="/hexWeek5/assets/main-BCCy7Nrj.js"></script>
-    <link rel="stylesheet" crossorigin href="/hexWeek5/assets/main-DzX9TC4z.css">
+    <script type="module" crossorigin src="/hexWeek5/assets/main-CZBh0KR5.js"></script>
+    <link rel="stylesheet" crossorigin href="/hexWeek5/assets/main-Cv-rK8gj.css">
   </head>
   <body class="font-bold">
     <aside class="fixed h-screen w-[296px]">
   <div class="flex h-full flex-col justify-between overflow-y-auto bg-gray-100">
     <div class="py-8">
-      <a class="block pb-8 pl-8" href="#">
+      <a class="block pb-4 pl-8" href="./index.html">
+        <h1></h1>
         <img
           src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/9f843c654f4bbfb95e6ab2eaf0c5a42f2c3c6205/week5/logo-ANSWER.svg"
-          alt="logo-ANSWER"
+          alt="ANSWER"
         />
       </a>
-      <ul class="space-y-5 leading-8">
+      <ul class="mt-4 space-y-5 pl-1 leading-8">
         <li>
-          <a href="#" class="sidebar">
+          <a href="#" class="sidebar hover:sidebarSelected">
             <span class="material-icons">assessment</span>
             <span class="ms-4">Dashboard</span>
           </a>
         </li>
         <li>
-          <a href="#" class="sidebar">
+          <a href="#" class="sidebar hover:sidebarSelected">
             <span class="material-icons">question_answer</span>
             <span class="ms-4">Question</span>
           </a>
         </li>
         <li>
-          <a href="./index.html" class="sidebar sidebarSelected">
-            <span class="material-icons sidebarSpanMinus">assignment</span>
+          <a
+            href="./index.html"
+            class="sidebar hover:sidebarSelected"
+            id="assignmentPages"
+          >
+            <span class="material-icons">assignment</span>
             <span class="ms-4">Assignment</span>
           </a>
         </li>
         <li>
-          <a href="#" class="sidebar">
+          <a href="#" class="sidebar hover:sidebarSelected">
             <span class="material-icons">video_library</span>
             <span class="ms-4">Course</span>
           </a>
         </li>
         <li>
-          <a href="./admin.html" class="sidebar">
+          <a
+            href="./admin.html"
+            class="sidebar hover:sidebarSelected"
+            id="adminPages"
+          >
             <span class="material-icons">people_alt</span>
             <span class="ms-4">Admin</span>
           </a>
         </li>
         <li>
-          <a href="#" class="sidebar">
+          <a href="#" class="sidebar hover:sidebarSelected">
             <span class="material-icons">settings</span>
             <span class="ms-4">Settings</span>
           </a>
@@ -108,7 +117,9 @@
           <tr>
             <th class="mr-[74px] flex items-center">
               ID
-              <span class="material-icons ml-1 text-lg">arrow_downward</span>
+              <a href="#">
+                <span class="material-icons ml-1 text-lg">arrow_downward</span>
+              </a>
             </th>
             <th class="mr-[192px]">Name</th>
             <th class="mr-[286px]">Email</th>
@@ -325,7 +336,7 @@
   </ul>
 </nav>
  <div class="modal hidden" id="newAdminModal" tabindex="-1">
-  <div class="modal-content scrollbar-hidden h-5/6 w-[430px]">
+  <div class="modal-content scrollbar-hidden flex h-5/6 w-[430px] flex-col">
     <div
       class="modalHeader sticky top-0 flex justify-between rounded-t-sm border-x border-t border-gray-400 bg-white px-8 py-4"
     >
@@ -334,7 +345,9 @@
         <span class="material-icons">close</span>
       </button>
     </div>
-    <div class="border-x border-gray-400 px-8 pb-8">
+    <div
+      class="modalBody flex-grow overflow-y-auto border-x border-gray-400 px-8 pb-8"
+    >
       <h3 class="pb-4">Account</h3>
       <form class="grid gap-4 text-[14px] font-normal">
         <div class="grid">
@@ -405,7 +418,7 @@
       </ul>
     </div>
     <div
-      class="modalFooter sticky bottom-0 space-x-4 rounded-b-sm border border-gray-400 bg-white px-8 py-4 text-end leading-5"
+      class="modalFooter space-x-4 rounded-b-sm border border-gray-400 bg-white px-8 py-4 text-end leading-5"
     >
       <button
         class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
@@ -448,7 +461,7 @@
             Verified
           </span>
           <button class="toggleBtn flex">
-            <span class="material-icons">expand_more</span>
+            <span class="material-icons arrow">expand_more</span>
           </button>
         </div>
       </div>
@@ -475,7 +488,7 @@
   </div>
 </div>
  <div class="modal hidden" id="editAdminModal" tabindex="-1">
-  <div class="modal-content scrollbar-hidden h-4/5 w-[430px]">
+  <div class="modal-content scrollbar-hidden flex h-5/6 w-[430px] flex-col">
     <div
       class="modalHeader sticky top-0 flex justify-between rounded-t-sm border-x border-t border-gray-400 bg-white px-8 py-4"
     >
@@ -484,7 +497,9 @@
         <span class="material-icons">close</span>
       </button>
     </div>
-    <div class="border-x border-gray-400 px-8 pb-8">
+    <div
+      class="modalBody flex-grow overflow-y-auto border-x border-gray-400 px-8 pb-8"
+    >
       <h3 class="pb-4">Account</h3>
       <form class="grid gap-4 text-[14px] font-normal">
         <div class="grid">
@@ -570,7 +585,7 @@
       </button>
     </div>
     <div
-      class="modalFooter sticky bottom-0 space-x-4 rounded-b-sm border border-gray-400 bg-white px-8 py-4 text-end leading-5"
+      class="modalFooter space-x-4 rounded-b-sm border border-gray-400 bg-white px-8 py-4 text-end leading-5"
     >
       <button
         class="closeModalBtn rounded-sm border border-green-700 px-8 py-2 text-green-700 duration-300 hover:bg-green-900 hover:text-white"
@@ -586,6 +601,6 @@
       </button>
     </div>
   </div>
-</div>
+</div>
   </body>
 </html>
